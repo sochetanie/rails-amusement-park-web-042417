@@ -1,0 +1,21 @@
+<h1>New User</h1>
+
+<%= form_for @user do |f| %>
+  <%= f.label "Name" %><br>
+  <%= f.text_field :name %><br>
+  <%= f.label "How nauseous are you? (1 - 5 scale)" %><br>
+  <%= f.number_field :nausea %><br>
+  <%= f.label "How happy are you? (1 - 5 scale)" %><br>
+  <%= f.number_field :happiness %><br>
+  <%= f.label "How much money do you have?" %><br>
+  <%= f.number_field :tickets %><br>
+  <%= f.label "Height (in inches)" %><br>
+  <%= f.number_field :height %><br>
+  <br>
+  <%= f.label "Check box if you are a theme park owner" %><br>
+  <%= f.check_box :admin %><br>
+  <br>
+  <%= f.label "Create your password:" %><br>
+  <%= f.text_field :password %><br><br>
+  <%= f.submit  %>
+  <% end %>

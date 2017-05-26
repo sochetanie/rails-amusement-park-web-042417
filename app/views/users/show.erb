@@ -1,0 +1,16 @@
+<h1>Hi, <%= @user.name %> </h1>
+<h3>Welcome to our park! </h3>
+
+<h3>Name: <%= @user.name %></h3><br>
+<h3>Mood: <%= @user.mood %></h3><br>
+<h3>Tickets: <%= @user.tickets %></h3><br>
+<h3>Height: <%= @user.height %> inches</h3><br>
+<h3>Membership:
+  <% if @user.admin == true %>
+  <%= "ADMIN" %>
+  <% else %>
+  <%= "GENERAL" %>
+  <% end %><br>
+<%= link_to "Edit", edit_user_path(@user) %><br><br>
+<%= link_to  "See attractions", attractions_path %>
+<%= link_to  "Log Out", logout_path %>

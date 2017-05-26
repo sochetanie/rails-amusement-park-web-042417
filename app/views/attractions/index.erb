@@ -1,0 +1,17 @@
+<h1>See our attractions: </h1>
+
+<% if current_user.admin == true   %>
+  <% @attractions.each do |att| %>
+    <%= link_to "Show " + att.name, attraction_path(att) %>
+    <br>
+  <% end %>
+<% else %>
+  <% @attractions.each do |att| %>
+    <%= link_to "Go on " + att.name, attraction_path(att) %>
+    <br>
+  <% end %>
+<% end %>
+
+<% if current_user.admin == true   %>
+  <%= link_to "New Attraction",  new_attraction_path %>
+<% end %>
